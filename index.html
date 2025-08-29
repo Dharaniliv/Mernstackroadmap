@@ -14,6 +14,10 @@
 
     .container{max-width:900px;margin:2rem auto;padding:0 1rem;}
 
+    /* PROGRESS BAR */
+    .progress-wrapper{background:#e5e7eb;border-radius:10px;overflow:hidden;height:30px;margin-bottom:2rem;position:relative;}
+    .progress-bar{height:100%;width:0%;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;transition:width 0.3s ease, background 0.3s ease;}
+
     /* TIMELINE ROADMAP */
     .roadmap{position:relative;margin:2rem 0;padding:1rem 0;}
     .roadmap::before{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);
@@ -28,6 +32,8 @@
     .step.left{left:0;}
     .step.right{left:50%;transform:translateX(50%);}
     .dot{width:18px;height:18px;background:#2563eb;border-radius:50%;position:absolute;top:20px;left:calc(50% - 9px);z-index:1;}
+    .checkbox{margin-top:0.8rem;}
+    .checkbox input{transform:scale(1.2);margin-right:8px;}
 
     /* RESOURCE CARDS */
     .resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:3rem;}
@@ -84,8 +90,13 @@
 
 <div class="container">
 
+  <!-- PROGRESS BAR -->
+  <div class="progress-wrapper">
+    <div class="progress-bar" id="progress-bar">0%</div>
+  </div>
+
   <!-- ROADMAP TIMELINE -->
-  <section class="roadmap">
+  <section class="roadmap" id="roadmap">
     <div class="dot"></div>
     <div class="step left">
       <span class="time">3 Weeks</span>
@@ -97,7 +108,11 @@
         <li>Box model, positioning, transitions</li>
         <li>Basic accessibility and SEO structure</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="0"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step right">
       <span class="time">2.5 Months</span>
@@ -110,7 +125,11 @@
         <li>Fetch API, promises, async/await</li>
         <li>Modules & imports/exports</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="1"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step left">
       <span class="time">2 Weeks</span>
@@ -122,7 +141,11 @@
         <li>Pull Requests & code review basics</li>
         <li>Using GitHub Pages for simple hosting</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="2"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step right">
       <span class="time">2 Months</span>
@@ -134,7 +157,11 @@
         <li>React Router for navigation</li>
         <li>Controlled forms & API integration</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="3"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step left">
       <span class="time">1 Month</span>
@@ -145,7 +172,11 @@
         <li>Event-driven programming</li>
         <li>Creating basic servers</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="4"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step right">
       <span class="time">3 Weeks</span>
@@ -155,7 +186,11 @@
         <li>Middleware & routing</li>
         <li>Error handling</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="5"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step left">
       <span class="time">1 Month</span>
@@ -165,7 +200,11 @@
         <li>Data modeling with Mongoose</li>
         <li>Indexes and query optimization</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="6"> Mark as Completed
+      </div>
     </div>
+
     <div class="dot"></div>
     <div class="step right">
       <span class="time">3 Weeks</span>
@@ -176,10 +215,13 @@
         <li>CRUD features end-to-end</li>
         <li>Deployment (Vercel / Render)</li>
       </ul>
+      <div class="checkbox">
+        <input type="checkbox" data-step="7"> Mark as Completed
+      </div>
     </div>
   </section>
 
-  <!-- RESOURCE LINKS -->
+    <!-- RESOURCE LINKS -->
   <section>
     <h2 style="margin:2rem 0 1rem;">Recommended Resources</h2>
     <div class="resources">
@@ -217,33 +259,70 @@
   </section>
 
   <!-- TIPS SECTION -->
-<section class="tips">
-  <h2>Pro Tips for MERN Learners</h2>
-  <ul>
-    <li>Master JavaScript fundamentals before moving to frameworks</li>
-    <li>Start using Git early to track and protect your progress</li>
-    <li>Build small projects after every stage to reinforce learning</li>
-    <li>Read and understand error messages to improve debugging skills</li>
-    <li>Write code yourself and ensure you understand every line</li>
-    <li>Solve real problems instead of relying only on tutorials</li>
-  </ul>
-</section>
+  <section class="tips">
+    <h2>Pro Tips for MERN Learners</h2>
+    <ul>
+      <li>Master JavaScript fundamentals before moving to frameworks</li>
+      <li>Start using Git early to track and protect your progress</li>
+      <li>Build small projects after every stage to reinforce learning</li>
+      <li>Read and understand error messages to improve debugging skills</li>
+      <li>Write code yourself and ensure you understand every line</li>
+      <li>Solve real problems instead of relying only on tutorials</li>
+    </ul>
+  </section>
 
-<section class="journey">
-  <h2>My Web Development Journey</h2>
-  <p>It took me almost two years to learn full stack web development because I had to balance college, social life and learning at the same time. I went at my own pace and that made the process sustainable.</p>
-  <p>I learned JavaScript first but instead of jumping into React right away I moved to backend development and databases. I wanted to understand how everything works before relying on any framework and then I came back to React later.</p>
-  <p>I also learned Figma to design clean layouts because I struggled to imagine interfaces while coding. Along the way I explored Next.js as well to go beyond the basics.</p>
-  <p>In the beginning I planned to learn after college every day but that rarely worked. Eventually I started waking up at 4 am to study before classes which helped me stay consistent even after I took a month long break when I felt exhausted.</p>
-  <p>I learned everything from YouTube, documentation and a low cost Udemy course. You do not need expensive programs to learn web development. You need time, patience and the habit of building as you learn.</p>
-  <p>If I could do it while balancing college and friends you can do it too by staying consistent and moving forward step by step.</p>
-</section>
+  <section class="journey">
+    <h2>My Web Development Journey</h2>
+    <p>It took me almost two years to learn full stack web development because I had to balance college, social life and learning at the same time. I went at my own pace and that made the process sustainable.</p>
+    <p>I learned JavaScript first but instead of jumping into React right away I moved to backend development and databases. I wanted to understand how everything works before relying on any framework and then I came back to React later.</p>
+    <p>I also learned Figma to design clean layouts because I struggled to imagine interfaces while coding. Along the way I explored Next.js as well to go beyond the basics.</p>
+    <p>In the beginning I planned to learn after college every day but that rarely worked. Eventually I started waking up at 4 am to study before classes which helped me stay consistent even after I took a month long break when I felt exhausted.</p>
+    <p>I learned everything from YouTube, documentation and a low cost Udemy course. You do not need expensive programs to learn web development. You need time, patience and the habit of building as you learn.</p>
+    <p>If I could do it while balancing college and friends you can do it too by staying consistent and moving forward step by step.</p>
+  </section>
 
+</div>
 </div>
 
 <footer>
   Follow me on Instagram <a href="https://instagram.com/dharanidevlife" target="_blank">@dharanidevlife</a>
 </footer>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][data-step]');
+  const progressBar = document.getElementById('progress-bar');
+  const totalSteps = checkboxes.length;
+
+  // Load progress from localStorage
+  const savedProgress = JSON.parse(localStorage.getItem('mernProgress')) || [];
+  checkboxes.forEach((cb, index) => {
+    if (savedProgress.includes(index)) cb.checked = true;
+
+    cb.addEventListener('change', () => {
+      const checkedSteps = [];
+      checkboxes.forEach((c, i) => {
+        if (c.checked) checkedSteps.push(i);
+      });
+      localStorage.setItem('mernProgress', JSON.stringify(checkedSteps));
+      updateProgress();
+    });
+  });
+
+  function updateProgress() {
+    const completed = document.querySelectorAll('input[type="checkbox"][data-step]:checked').length;
+    const percent = Math.round((completed / totalSteps) * 100);
+    progressBar.textContent = percent + '%';
+
+    // Color transition: red → yellow → green
+    if (percent <= 33) progressBar.style.background = 'linear-gradient(90deg, #ef4444, #f87171)';
+    else if (percent <= 66) progressBar.style.background = 'linear-gradient(90deg, #facc15, #fbbf24)';
+    else progressBar.style.background = 'linear-gradient(90deg, #22c55e, #16a34a)';
+
+    progressBar.style.width = percent + '%';
+  }
+
+  updateProgress();
+</script>
 
 </body>
 </html>
