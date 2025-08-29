@@ -44,10 +44,34 @@
     .tips ul{list-style:disc;padding-left:1.5rem;}
     .tips ul li{margin:0.5rem 0;color:#334155;font-size:0.95rem;}
 
+    /* JOURNEY SECTION */
+    .journey{max-width:900px;margin:3rem auto;padding:2rem;background:#f9fafb;
+      border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    .journey h2{text-align:center;color:#1e3a8a;font-size:1.8rem;margin-bottom:1rem;}
+    .journey p{font-size:1rem;line-height:1.7;color:#333;margin-bottom:1rem;}
+    .journey p:last-child{text-align:center;margin-top:1.5rem;}
+
     /* FOOTER */
     footer{text-align:center;margin-top:4rem;padding:1.5rem;background:#f1f5f9;font-size:0.95rem;}
     footer a{color:#2563eb;text-decoration:none;font-weight:600;}
     footer a:hover{text-decoration:underline;}
+
+    /* RESPONSIVE DESIGN */
+    @media(max-width:768px){
+      header h1{font-size:1.8rem;}
+      header p{font-size:1rem;}
+      .roadmap::before{left:8px;transform:none;}
+      .step{width:100%;padding:1rem 1rem;margin:1rem 0;}
+      .step.left,.step.right{left:0;transform:none;}
+      .dot{left:-1px;}
+      .journey{padding:1rem;}
+    }
+    @media(max-width:480px){
+      header{padding:2rem 1rem;}
+      .timeframe{font-size:1rem;}
+      .card p{font-size:0.85rem;}
+      .tips ul li{font-size:0.9rem;}
+    }
   </style>
 </head>
 <body>
@@ -203,30 +227,17 @@
     <li>Write code yourself and ensure you understand every line</li>
     <li>Solve real problems instead of relying only on tutorials</li>
   </ul>
-<section class="journey" style="max-width: 900px; margin: 3rem auto; padding: 2rem; background: #f9fafb; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <h2 style="color: #1e3a8a; font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">
-    My Web Development Journey
-  </h2>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
-    It took me almost two years to learn full stack web development because I had to balance college, social life and learning at the same time. I went at my own pace and that made the process sustainable.
-  </p>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
-    I learned JavaScript first but instead of jumping into React right away I moved to backend development and databases. I wanted to understand how everything works before relying on any framework and then I came back to React later.
-  </p>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
-    I also learned Figma to design clean layouts because I struggled to imagine interfaces while coding. Along the way I explored Next.js as well to go beyond the basics.
-  </p>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
-    In the beginning I planned to learn after college every day but that rarely worked. Eventually I started waking up at 4 am to study before classes which helped me stay consistent even after I took a month long break when I felt exhausted.
-  </p>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
-    I learned everything from YouTube, documentation and a low cost Udemy course. You do not need expensive programs to learn web development. You need time, patience and the habit of building as you learn.
-  </p>
-  <p style="font-size: 1rem; line-height: 1.7; color: #333; text-align: center; margin-top: 1.5rem;">
-    If I could do it while balancing college and friends you can do it too by staying consistent and moving forward step by step.
-  </p>
 </section>
 
+<section class="journey">
+  <h2>My Web Development Journey</h2>
+  <p>It took me almost two years to learn full stack web development because I had to balance college, social life and learning at the same time. I went at my own pace and that made the process sustainable.</p>
+  <p>I learned JavaScript first but instead of jumping into React right away I moved to backend development and databases. I wanted to understand how everything works before relying on any framework and then I came back to React later.</p>
+  <p>I also learned Figma to design clean layouts because I struggled to imagine interfaces while coding. Along the way I explored Next.js as well to go beyond the basics.</p>
+  <p>In the beginning I planned to learn after college every day but that rarely worked. Eventually I started waking up at 4 am to study before classes which helped me stay consistent even after I took a month long break when I felt exhausted.</p>
+  <p>I learned everything from YouTube, documentation and a low cost Udemy course. You do not need expensive programs to learn web development. You need time, patience and the habit of building as you learn.</p>
+  <p>If I could do it while balancing college and friends you can do it too by staying consistent and moving forward step by step.</p>
+</section>
 
 </div>
 
