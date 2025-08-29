@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MERN Stack Roadmap by Dharani</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+    body{background:#fafafa;color:#1f2937;line-height:1.6;}
+    header{background:linear-gradient(135deg,#2563eb,#6366f1);color:white;text-align:center;padding:3rem 1rem;}
+    header h1{font-size:2.5rem;margin-bottom:0.5rem;}
+    header p{font-size:1.1rem;opacity:0.95;}
+    .timeframe{font-size:1.2rem;margin-top:0.8rem;font-weight:600;}
+
+    .container{max-width:900px;margin:2rem auto;padding:0 1rem;}
+
+    /* TIMELINE ROADMAP */
+    .roadmap{position:relative;margin:2rem 0;padding:1rem 0;}
+    .roadmap::before{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);
+      width:4px;height:100%;background:#e2e8f0;border-radius:2px;}
+    .step{position:relative;width:50%;padding:1.5rem 2rem;background:white;
+      border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.08);margin:2rem 0;}
+    .step h2{font-size:1.2rem;color:#0f172a;margin-bottom:0.5rem;}
+    .step ul{list-style:none;font-size:0.95rem;}
+    .step ul li{margin:0.25rem 0;}
+    .step .time{font-size:0.8rem;font-weight:600;background:#dbeafe;
+      color:#1e40af;padding:0.2rem 0.6rem;border-radius:6px;display:inline-block;margin-bottom:0.5rem;}
+    .step.left{left:0;}
+    .step.right{left:50%;transform:translateX(50%);}
+    .dot{width:18px;height:18px;background:#2563eb;border-radius:50%;position:absolute;top:20px;left:calc(50% - 9px);z-index:1;}
+
+    /* RESOURCE CARDS */
+    .resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:3rem;}
+    .card{background:white;border-radius:12px;padding:1.2rem;box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+    .card h3{margin-bottom:0.5rem;font-size:1.1rem;color:#0f172a;}
+    .card p{font-size:0.9rem;color:#334155;margin-bottom:0.5rem;}
+    .card a{color:#2563eb;font-weight:600;text-decoration:none;}
+    .card a:hover{text-decoration:underline;}
+
+    /* TIPS SECTION */
+    .tips{margin-top:4rem;background:white;border-radius:12px;padding:1.5rem;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+    .tips h2{margin-bottom:1rem;color:#0f172a;}
+    .tips ul{list-style:disc;padding-left:1.5rem;}
+    .tips ul li{margin:0.5rem 0;color:#334155;font-size:0.95rem;}
+
+    /* FOOTER */
+    footer{text-align:center;margin-top:4rem;padding:1.5rem;background:#f1f5f9;font-size:0.95rem;}
+    footer a{color:#2563eb;text-decoration:none;font-weight:600;}
+    footer a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MERN Stack Roadmap by Dharani</h1>
+  <p>Your complete guide to becoming a MERN Stack Developer</p>
+  <div class="timeframe">Estimated Time: 9 Months</div>
+</header>
+
+<div class="container">
+
+  <!-- ROADMAP TIMELINE -->
+  <section class="roadmap">
+    <div class="dot"></div>
+    <div class="step left">
+      <span class="time">3 Weeks</span>
+      <h2>HTML & CSS Fundamentals</h2>
+      <ul>
+        <li>Semantic HTML (header, nav, section, footer)</li>
+        <li>Forms, tables, images, lists</li>
+        <li>Flexbox, Grid & responsive layouts</li>
+        <li>Box model, positioning, transitions</li>
+        <li>Basic accessibility and SEO structure</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step right">
+      <span class="time">2.5 Months</span>
+      <h2>JavaScript Core</h2>
+      <ul>
+        <li>Variables, scope, data types</li>
+        <li>Functions, closures, higher-order functions</li>
+        <li>DOM manipulation and events</li>
+        <li>ES6+ features (destructuring, spread/rest)</li>
+        <li>Fetch API, promises, async/await</li>
+        <li>Modules & imports/exports</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step left">
+      <span class="time">2 Weeks</span>
+      <h2>Git & GitHub</h2>
+      <ul>
+        <li>Basic commands: init, add, commit, push</li>
+        <li>Branching, merging, resolving conflicts</li>
+        <li>Working with remote repositories</li>
+        <li>Pull Requests & code review basics</li>
+        <li>Using GitHub Pages for simple hosting</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step right">
+      <span class="time">2 Months</span>
+      <h2>React.js</h2>
+      <ul>
+        <li>Components, props, state</li>
+        <li>Hooks: useState, useEffect, useRef</li>
+        <li>Conditional rendering, lists & keys</li>
+        <li>React Router for navigation</li>
+        <li>Controlled forms & API integration</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step left">
+      <span class="time">1 Month</span>
+      <h2>Node.js</h2>
+      <ul>
+        <li>Node runtime, npm basics</li>
+        <li>Built-in modules (fs, path, http)</li>
+        <li>Event-driven programming</li>
+        <li>Creating basic servers</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step right">
+      <span class="time">3 Weeks</span>
+      <h2>Express.js</h2>
+      <ul>
+        <li>Building RESTful APIs</li>
+        <li>Middleware & routing</li>
+        <li>Error handling</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step left">
+      <span class="time">1 Month</span>
+      <h2>MongoDB</h2>
+      <ul>
+        <li>CRUD operations</li>
+        <li>Data modeling with Mongoose</li>
+        <li>Indexes and query optimization</li>
+      </ul>
+    </div>
+    <div class="dot"></div>
+    <div class="step right">
+      <span class="time">3 Weeks</span>
+      <h2>Combine All → Full MERN Project</h2>
+      <ul>
+        <li>Frontend + backend integration</li>
+        <li>Authentication (JWT)</li>
+        <li>CRUD features end-to-end</li>
+        <li>Deployment (Vercel / Render)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESOURCE LINKS -->
+  <section>
+    <h2 style="margin:2rem 0 1rem;">Recommended Resources</h2>
+    <div class="resources">
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>Learn the building blocks of the web.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Docs →</a>
+      </div>
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>Master core programming concepts.</p>
+        <a href="https://javascript.info" target="_blank">JavaScript.info →</a>
+      </div>
+      <div class="card">
+        <h3>Git & GitHub</h3>
+        <p>Control your code history and collaborate.</p>
+        <a href="https://git-scm.com/doc" target="_blank">Git Docs →</a>
+      </div>
+      <div class="card">
+        <h3>React.js</h3>
+        <p>Build modern frontend apps.</p>
+        <a href="https://react.dev" target="_blank">React Docs →</a>
+      </div>
+      <div class="card">
+        <h3>Node & Express</h3>
+        <p>Create powerful backend APIs.</p>
+        <a href="https://nodejs.org/en/docs/" target="_blank">Node Docs →</a>
+      </div>
+      <div class="card">
+        <h3>MongoDB</h3>
+        <p>Work with NoSQL databases.</p>
+        <a href="https://learn.mongodb.com/" target="_blank">MongoDB Docs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS SECTION -->
+<section class="tips">
+  <h2>Pro Tips for MERN Learners</h2>
+  <ul>
+    <li>Master JavaScript fundamentals before moving to frameworks</li>
+    <li>Start using Git early to track and protect your progress</li>
+    <li>Build small projects after every stage to reinforce learning</li>
+    <li>Read and understand error messages to improve debugging skills</li>
+    <li>Write code yourself and ensure you understand every line</li>
+    <li>Solve real problems instead of relying only on tutorials</li>
+  </ul>
+<section class="journey" style="max-width: 900px; margin: 3rem auto; padding: 2rem; background: #f9fafb; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <h2 style="color: #1e3a8a; font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">
+    My Web Development Journey
+  </h2>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
+    It took me almost two years to learn full stack web development because I had to balance college, social life and learning at the same time. I went at my own pace and that made the process sustainable.
+  </p>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
+    I learned JavaScript first but instead of jumping into React right away I moved to backend development and databases. I wanted to understand how everything works before relying on any framework and then I came back to React later.
+  </p>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
+    I also learned Figma to design clean layouts because I struggled to imagine interfaces while coding. Along the way I explored Next.js as well to go beyond the basics.
+  </p>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
+    In the beginning I planned to learn after college every day but that rarely worked. Eventually I started waking up at 4 am to study before classes which helped me stay consistent even after I took a month long break when I felt exhausted.
+  </p>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1rem;">
+    I learned everything from YouTube, documentation and a low cost Udemy course. You do not need expensive programs to learn web development. You need time, patience and the habit of building as you learn.
+  </p>
+  <p style="font-size: 1rem; line-height: 1.7; color: #333; text-align: center; margin-top: 1.5rem;">
+    If I could do it while balancing college and friends you can do it too by staying consistent and moving forward step by step.
+  </p>
+</section>
+
+
+</div>
+
+<footer>
+  Follow me on Instagram <a href="https://instagram.com/dharanidevlife" target="_blank">@dharanidevlife</a>
+</footer>
+
+</body>
+</html>
